@@ -13,6 +13,7 @@ export const shellRoutes: Routes = [
       {
         path: 'main',
         component: MainContentComponent,
+        
       },
     ],
   },
