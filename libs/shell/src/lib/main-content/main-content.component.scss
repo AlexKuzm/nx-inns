@@ -3,14 +3,16 @@
     flex-direction: row;
     justify-content: space-between;
     text-align: center;
+    align-items: stretch;
+    min-height: 600px;
 }
 .bar-container {
     &.sidebar {
-        background: rgb(196, 225, 255);
+        background: rgba(196, 255, 226, 0.568);
         flex: 1 1 auto;
     }
     &.content {
-        background: rgba(48, 135, 228, 0.685);
+        background: rgba(137, 222, 255, 0.685);
         flex: 4 1 auto;
     }
 }  
