@@ -28,6 +28,9 @@
     "nx-innosep-e2e": {
       "tags": [],
       "implicitDependencies": ["nx-innosep"]
+    },
+    "shell": {
+      "tags": []
     }
   }
 }
