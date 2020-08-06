@@ -1,13 +1,35 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterModule, Route } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
+import { ShellComponent } from './shell/shell.component';
+import { MainContentComponent } from './main-content/main-content.component';
+import { MainHeaderComponent } from './main-header/main-header.component';
+import { MainFooterComponent } from './main-footer/main-footer.component';
 
-export const shellRoutes: Route[] = [];
+export const shellRoutes: Routes = [
+  {
+    path: '',
+    component: ShellComponent,
+    children: [
+      {
+        path: 'main',
+        component: MainContentComponent,
+      },
+    ],
+  },
+];
 
 @NgModule({
-  imports: [
-    CommonModule, 
-    RouterModule
+  imports: [ 
+    RouterModule.forRoot(shellRoutes),
+  ],
+  exports: [
+    RouterModule,
+  ],
+  declarations: [
+    ShellComponent, 
+    MainContentComponent,
+    MainHeaderComponent,
+    MainFooterComponent
   ],
 })
 export class ShellModule {}
